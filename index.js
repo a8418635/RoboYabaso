@@ -104,7 +104,7 @@ function parseInput(rplyToken, inputStr) {
 \n不要打成大寫D，不要逼我嗆你 \
 \n如果是CoC系的話，有初步支援cc擲骰了，獎懲骰也支援了。 \
 ';
-        if (inputStr.match('鴨霸獸') != null) return randomReply() ;
+        if (inputStr.match('金屬阿狗') != null) return randomReply() ;
         
         //cc指令開始於此
         if (inputStr.split('=')[0] == 'cc<') 
@@ -132,7 +132,7 @@ function parseInput(rplyToken, inputStr) {
 
         
         //roll 指令開始於此
-        if (trigger == 'roll'){        
+        if (trigger == '/r'){        
                   
           if (inputStr.split(msgSplitor).length == 1) return '\
 總之你要擲骰前就先打/r，後面接像是2d6，1d6+3，2d6+1d3之類的就好。  \
@@ -381,6 +381,6 @@ return countStr;
 
 
         function randomReply() {
-          let rplyArr = ['87不要亂玩。', '阿狗說你好 /n:你好', '就說了不要隨便叫我。', '請不要說話拜偷'];
+          let rplyArr = ['87不要亂玩。', '阿狗說你好', '就說了不要隨便叫我。', '請不要說話拜偷'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
