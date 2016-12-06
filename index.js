@@ -12,7 +12,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer [LineAuthorization]'
+    'Authorization': 'Bearer OHxP1u3UcmkAFBACkAMvI+k0QSSNXinCy1nYHKxAmAks3hdslDUpW+WIVQGFyRb8ts0XA6m3l5TyQWOpE3/vj1bmOvOaB85IyhKVR/daRkdTdkDLgXj84XEDurkh6EgjEfPY3CoQgCkyNxlv1rUkQQdB04t89/1O/w1cDnyilFU='
   
   }
 }
@@ -98,13 +98,13 @@ function parseInput(rplyToken, inputStr) {
           return isNaN(parseInt(obj));
         }                   
         //鴨霸獸指令開始於此
-        if (inputStr.match('鴨霸獸') != null && inputStr.match('說明') != null) return randomReply() + '\n' + '\
-總之你要擲骰前就先打roll，後面接像是2d6，1d6+3，2d6+1d3之類的就好。  \
+        if (inputStr.match('金屬阿狗') != null && inputStr.match('說明') != null) return randomReply() + '\n' + '\
+總之你要擲骰前就先打/r，後面接像是2d6，1d6+3，2d6+1d3之類的就好。  \
 \n要多筆輸出就是先空一格再打像是 *5 之類的。  \
 \n不要打成大寫D，不要逼我嗆你 \
 \n如果是CoC系的話，有初步支援cc擲骰了，獎懲骰也支援了。 \
 ';
-        if (inputStr.match('鴨霸獸') != null) return randomReply() ;
+        if (inputStr.match('金屬阿狗') != null) return randomReply() ;
         
         //cc指令開始於此
         if (inputStr.split('=')[0] == 'cc<') 
@@ -132,10 +132,10 @@ function parseInput(rplyToken, inputStr) {
 
         
         //roll 指令開始於此
-        if (trigger == 'roll'){        
+        if (trigger == '/r'){        
                   
           if (inputStr.split(msgSplitor).length == 1) return '\
-總之你要擲骰前就先打roll，後面接像是2d6，1d6+3，2d6+1d3之類的就好。  \
+總之你要擲骰前就先打/r，後面接像是2d6，1d6+3，2d6+1d3之類的就好。  \
 \n要多筆輸出就是先空一格再打像是 *5 之類的。  \
 \n不要打成大寫D，不要逼我嗆你';
           if (inputStr.split(msgSplitor).length >= 3){
@@ -156,7 +156,7 @@ function parseInput(rplyToken, inputStr) {
         }
         
         
-        if (trigger != 'roll') return null;
+        if (trigger != '/r') return null;
         
       }
 
@@ -380,7 +380,4 @@ return countStr;
         }              
 
 
-        function randomReply() {
-          let rplyArr = ['你們死定了呃呃呃不要糾結這些……所以是在糾結哪些？', '在澳洲，每過一分鐘就有一隻鴨嘴獸被拔嘴。 \n我到底在共三小。', '嗚噁噁噁噁噁噁，不要隨便叫我。', '幹，你這學不會的豬！', '嘎嘎嘎。', 'wwwwwwwwwwwwwwwww', '為什麼你們每天都可以一直玩；玩就算了還玩我。', '好棒，整點了！咦？不是嗎？', '不要打擾我挖坑！', '好棒，誤點了！', '在南半球，一隻鴨嘴獸拍打他的鰭，他的嘴就會掉下來。 \n我到底在共三小。', '什麼東西你共三小。', '哈哈哈哈哈哈哈哈！', '一直叫，你4不4想拔嘴人家？', '一直叫，你想被淨灘嗎？', '幫主你也敢嘴？'];
-          return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
-        }
+      
