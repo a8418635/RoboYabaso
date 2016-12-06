@@ -12,7 +12,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer OHxP1u3UcmkAFBACkAMvI+k0QSSNXinCy1nYHKxAmAks3hdslDUpW+WIVQGFyRb8ts0XA6m3l5TyQWOpE3/vj1bmOvOaB85IyhKVR/daRkdTdkDLgXj84XEDurkh6EgjEfPY3CoQgCkyNxlv1rUkQQdB04t89/1O/w1cDnyilFU='
+    'Authorization': 'OHxP1u3UcmkAFBACkAMvI+k0QSSNXinCy1nYHKxAmAks3hdslDUpW+WIVQGFyRb8ts0XA6m3l5TyQWOpE3/vj1bmOvOaB85IyhKVR/daRkdTdkDLgXj84XEDurkh6EgjEfPY3CoQgCkyNxlv1rUkQQdB04t89/1O/w1cDnyilFU='
   
   }
 }
