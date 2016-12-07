@@ -104,8 +104,8 @@ function parseInput(rplyToken, inputStr) {
 \n不要打成大寫D，不要逼我嗆你 \
 \n如果是CoC系的話，有初步支援cc擲骰了，獎懲骰也支援了。 \
 \n打運勢就可以招喚金屬阿狗幫你算命。 \
-\n早餐OR午餐OR晚餐就可以讓金屬阿狗為你推薦菜單\
-';
+\n早餐OR午餐OR晚餐就可以讓金屬阿狗為你推薦菜單 \
+ ';
   
 
         if (inputStr.match('金屬阿狗') != null) return randomReply() ;
