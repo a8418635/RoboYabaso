@@ -409,7 +409,7 @@ function dinner() {
           '\水餃如何? \
 \n薄薄的皮中可以看見肉與菜的顏色，一口咬下，滾燙的肉汁噴灑在嘴裡',
           '\義大利麵如何? \
-\n微酸的醬汁沾染在彈牙的麵條上，把麵給染上紅色',];
+\n微酸的醬汁沾染在彈牙的麵條上，把麵給染上紅色'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }//晚餐
 function breakfast() {
