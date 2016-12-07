@@ -103,7 +103,7 @@ function parseInput(rplyToken, inputStr) {
 \n要多筆輸出就是先空一格再打像是 *5 之類的。  \
 \n不要打成大寫D，不要逼我嗆你 \
 \n如果是CoC系的話，有初步支援cc擲骰了，獎懲骰也支援了。 \
-打運勢就可以招喚金屬阿狗幫你算命。 \
+\打運勢就可以招喚金屬阿狗幫你算命。 \
 ';
         if (inputStr.match('金屬阿狗') != null) return randomReply() ;
   
