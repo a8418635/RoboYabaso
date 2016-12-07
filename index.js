@@ -106,6 +106,12 @@ function parseInput(rplyToken, inputStr) {
 \n打運勢就可以招喚金屬阿狗幫你算命。 \
 \n早餐OR午餐OR晚餐就可以讓金屬阿狗為你推薦菜單 \
  ';
+  if (inputStr.match('早餐') != null)return breakfast();
+  
+ if (inputStr.match('午餐') != null)return lunch();
+ 
+if (inputStr.match('晚餐') != null)return dinner();
+
   
 
         if (inputStr.match('金屬阿狗') != null) return randomReply() ;
@@ -396,5 +402,53 @@ function Luck() {
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
 //運勢
+function dinner() {
+          let rplyArr = [
+            '\牛肉麵如何? \
+\n肥美多汁的牛肉配上勁道十足的麵條',
+          '\咖哩飯如何? \
+\n香氣四溢的醬汁淋在香甜的白飯上面，用適當的辣度佐著軟爛的馬鈴薯',
+          '\雞排如何? \
+\n酥脆的麵衣包裹著多汁的雞肉，剛剛好的熱度，微量的胡椒',
+          '\火鍋如何? \
+\n豐富的配料，燉煮軟爛的高麗菜，隨心意添加的肉片，整鍋滿滿的高湯澆淋在飯上',
+          '\水餃如何? \
+\n薄薄的皮中可以看見肉與菜的顏色，一口咬下，滾燙的肉汁噴灑在嘴裡',
+          '\義大利麵如何? \
+\n微酸的醬汁沾染在彈牙的麵條上，把麵給染上紅色'];
+          return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
+        }//晚餐
+function breakfast() {
+          let rplyArr = [
+            '\漢堡如何? \
+\n層層堆疊的厚實肉塊上有著融化的起司和爽脆的生菜',
+          '\三明治如何? \
+\n白軟的麵包中夾著一層層的生菜和火腿，清爽',
+          '\鐵板麵如何? \
+\n麵條上沾滿微辣的黑胡椒醬汁，肉片青菜隨意的點綴著',
+          '\小籠包如何? \
+\n剛好的一口大小可以輕鬆享用，火熱的肉汁一咬下就塞滿口中',
+          '\蛋餅如何? \
+\n就算只有蛋也很好吃，但如果可以的話就加上一點香氣四溢的培根，香甜的玉米，融化的牽絲起司',
+          '\飯糰如何? \
+\n滿滿的糯米裡面夾著肉鬆和鹹菜，口味多變又可以讓人充滿飽足'];
+          return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
+        }
+function lunch() {
+          let rplyArr = [
+          '\蛋包飯如何? \
+\n在茄紅的米飯上面裹上一層蛋衣，蛋與飯可以一同輕鬆享用 \ ',
+          '\牛排如何? \
+\n滋滋作響的鐵板上面有著軟嫩的牛排，沾上薄鹽',
+          '\涼拌空氣佐高能量水如何? \
+\n清涼的空氣中充滿了臭氧的清新，配上高能量水補充一天所需',
+          '\拉麵如何? \
+\n濃厚的豚骨高湯中放著叉燒筍乾糖心蛋，厚實的麵條是匠人精心製作',
+          '\滷肉飯如何? \
+\n在普通的白飯上淋上一層入味的肉汁就可以讓它變成一道美味佳餚，配上一些剁碎的筍乾更是絕配',
+          '\麵包如何? \
+\n螺旋型的麵包內夾著甜膩的奶油，撒上一些葡萄乾和糖粉來點綴著'];
+          return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
+        }
 
 
