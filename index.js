@@ -107,11 +107,11 @@ function parseInput(rplyToken, inputStr) {
 \n早餐午餐晚餐可以招喚機巧阿狗來提供菜單\
 ';
         if (inputStr.match('機巧阿狗') != null) return randomReply() ;
-  if (inputStr.match('早餐') != null) return breakfast() ;
-  if (inputStr.match('午餐') != null) return lunch() ;
-  if (inputStr.match('晚餐') != null) return dinner() ;
+  if (trigger =='早餐') return breakfast() ;
+if (trigger =='午餐')return lunch() ;
+  if (trigger =='晚餐')return dinner() ;
   
-  if (inputStr.match('運勢') != null) return Luck() ;
+  if (trigger =='運勢') return Luck() ;
         
         //cc指令開始於此
         if (inputStr.split('=')[0] == 'cc<') 
@@ -388,11 +388,22 @@ return countStr;
 
 
         function randomReply() {
-          let rplyArr = ['87不要亂玩。', '機巧阿狗說你好 你好87', '\n就說了不要隨便叫我。', '\n請不要說話拜偷','你知道在非洲每一分鐘就會有一個87招喚機巧阿狗嗎?','據說隔壁澳洲有人在拔嘴'];
+          let rplyArr = ['我早說過不要叫我', '你再叫我我就生氣了喔',
+                         '請不要隨便叫我',
+                         '有種你就在叫一次',
+                         '還叫!',
+                         '早就叫你不要叫了',
+                         '不是說過不要叫了嗎'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
 function Luck() {
-          let rplyArr = ['大吉大利 恭喜你官司纏身', '中吉 這種不大也不小的東西感覺真是可憐', '小吉 阿不就好棒逆', '凶 吾夜觀天象 有一死兆星','大凶 我看妳印堂發黑 但你我有緣 這邊一份護身符就10元賣你','凶 血光之災 血光之災'];
+          let rplyArr = ['大吉OAOb 你今天大概會好運吧 大概', 
+                         '中吉OAO 不上不下的', 
+                         '小吉~OAO~ 這......小確幸?',
+                         '凶OvO 走夜路小心點',
+                         '大凶OwO 等一下的骰子一定會失敗的',
+                         '\大吉OwO\
+                        \n我耍你的 是大凶\'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
 
