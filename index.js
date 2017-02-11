@@ -388,7 +388,8 @@ return countStr;
 
 
         function randomReply() {
-          let rplyArr = ['我早說過不要叫我', '你再叫我我就生氣了喔',
+          let rplyArr = ['我早說過不要叫我', 
+                         '你再叫我我就生氣了喔',
                          '請不要隨便叫我',
                          '有種你就在叫一次',
                          '還叫!',
@@ -402,8 +403,8 @@ function Luck() {
                          '小吉~OAO~ 這......小確幸?',
                          '凶OvO 走夜路小心點',
                          '大凶OwO 等一下的骰子一定會失敗的',
-                         '\大吉OwO\
-                        \n我耍你的 是大凶\'];
+                         '\大吉OwO \
+                        \n我耍你的 是大凶 \'];
           return rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
         }
 
